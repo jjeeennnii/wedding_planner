@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Impian Kita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Bagian kiri -->
+    <div class="left">
+      <div class="overlay">
+        <h1>Wedding Planner</h1>
+        <h2>“Impian Kita”</h2>
+        <p>Mulai perjalanan cinta kalian bersama kami</p>
+      </div>
+    </div>
+
+    <!-- Bagian kanan -->
+    <div class="right">
+      <h2>Buat Akun <span>Impian Kita</span></h2>
+      <button class="google-btn">🔹 Sign Up with Google</button>
+      <div class="or">or register with email</div>
+
+      <form action="/signup" method="POST">
+        <input type="text" placeholder="Nama Lengkap" name="fullname" required>
+        <input type="email" placeholder="Alamat Email" name="email" required>
+        <input type="password" placeholder="Password" name="password" required>
+        <input type="password" placeholder="Konfirmasi Password" name="confirmPassword" required>
+
+        <button type="submit" class="signin">DAFTAR</button>
+      </form>
+
+      <div class="signup">
+        Sudah punya akun? <a href="/login">Login</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Impian Kita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #fff0f5, #fff);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-family: 'Kalam', cursive;
+      font-size: 1.8em;
+      color: #991b1b;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #991b1b;
+      margin-left: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c43d3d;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 80px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8em;
+      color: #991b1b;
+    }
+
+    .hero-text p {
+      margin-top: 10px;
+      color: #555;
+      font-size: 1.1em;
+    }
+
+    .hero-text button {
+      margin-top: 25px;
+      background: #991b1b;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero-text button:hover {
+      background: #c43d3d;
+    }
+
+    .hero img {
+      width: 45%;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      background: #fff;
+      border-top: 1px solid #eee;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Impian Kita</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Booking</a>
+      <a href="#">Galeri</a>
+      <a href="#">Kontak</a>
+      <a href="/logout">Logout</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Selamat Datang di <span style="font-family:'Kalam', cursive;">Impian Kita</span></h1>
+      <p>Kami bantu merancang hari bahagiamu — mulai dari konsep, dekorasi, hingga momen tak terlupakan. 💍</p>
+      <button onclick="window.location.href='/add_booking'">Mulai Booking</button>
+    </div>
+    <img src="/login_img.png" alt="Wedding Couple">
+  </section>
+
+  <footer>
+    © 2025 Impian Kita | Designed with ❤️ untuk hari bahagiamu
+  </footer>
+
+</body>
+</html>

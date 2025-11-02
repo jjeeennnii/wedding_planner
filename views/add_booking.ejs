@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tambah Booking</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h2>📝 Tambah Booking Baru</h2>
+  <form method="POST" action="/add">
+    <label>Client ID:</label>
+    <input type="number" name="client_id" required><br>
+    <label>Package ID:</label>
+    <input type="number" name="package_id"><br>
+    <label>Tanggal Booking:</label>
+    <input type="date" name="booking_date"><br>
+    <label>Tanggal Wedding:</label>
+    <input type="date" name="wedding_date"><br>
+    <button type="submit">Simpan</button>
+  </form>
+  <br>
+  <a href="/">⬅ Kembali</a>
+</body>
+</html>

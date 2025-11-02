@@ -1,0 +1,137 @@
+/* Container utama */
+.container {
+  display: flex;
+  width: 900px;
+  height: 550px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: row; /* pastikan horizontal */
+}
+
+/* Kiri: gambar */
+.left {
+  flex: 1;
+  background: url('login_img.png') center/cover no-repeat;
+  position: relative;
+}
+
+.overlay {
+
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  color: black;
+  align-items: center; 
+  text-align: center; 
+  
+
+ 
+}
+
+.overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  line-height: 1.3;
+ 
+}
+
+.overlay p {
+  margin-top: 10px;
+  font-family: 'Kalam', cursive;
+  font-size: 15px;
+  font-style: italic; /* membuat teks miring */
+
+
+}
+
+/* Kanan: form login */
+.right {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* agar form dan judul center horizontal */
+  text-align: center; /* agar teks center */
+}
+
+.right h2 {
+  color: #991b1b;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.right h2 span {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* supaya input full width */
+  max-width: 300px; /* batasi lebar */
+  gap: 15px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #991b1b;
+  box-shadow: 0 0 5px rgba(153,27,27,0.5);
+}
+
+.signin {
+  background-color: #991b1b;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signin:hover {
+  background-color: #b22222;
+}
+
+.signup {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.signup a {
+  color: #991b1b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .left, .right {
+    width: 100%;
+    height: 300px;
+  }
+  .overlay {
+    bottom: 10%;
+    left: 5%;
+    right: 5%;
+  }
+}
+/* Judul dan slogan */
+.right .title {
+  margin-top: 40px;
+}
