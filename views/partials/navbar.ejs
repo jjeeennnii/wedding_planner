@@ -1,0 +1,31 @@
+<nav>
+  <a href="/" class="logo">Impian Kita</a>
+
+  <div class="nav-links">
+    <a href="/">Home</a>
+  </div>
+
+  <% if (user) { %>
+    <div class="nav-user">
+      <% if (user.profile_image) { %>
+        <img src="<%= user.profile_image %>" alt="Profile" class="avatar">
+      <% } else { %>
+        <% 
+          // ambil inisial nama user, contoh "Hadi Kurniawan" → "HK"
+          const initials = user.full_name
+            .split(' ')
+            .map(n => n[0].toUpperCase())
+            .join('');
+        %>
+        <div class="avatar avatar-text"><%= initials %></div>
+      <% } %>
+      <span class="user-name"><%= user.full_name %></span>
+      <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+  <% } else { %>
+    <div class="nav-buttons">
+      <a href="/login">Login</a>
+      <a href="/signup">Daftar</a>
+    </div>
+  <% } %>
+</nav>

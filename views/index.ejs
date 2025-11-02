@@ -171,21 +171,10 @@
 </head>
 <body>
 
-  <!-- ===== Navbar ===== -->
-  <nav>
-    <a href="/" class="logo">Impian Kita</a>
+  <!-- Navbar -->
+  <%- include('partials/navbar', { user }) %>
 
-    <div class="nav-links">
-      <a href="/">Home</a>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="/login">Login</a>
-      <a href="/signup">Daftar</a>
-    </div>
-  </nav>
-
-  <!-- ===== Hero Section ===== -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
       <h1>Wujudkan Pernikahan Impian Kalian</h1>
@@ -194,23 +183,9 @@
     </div>
 
     <div class="hero-img">
-      <img src="https://via.placeholder.com/500x400.png?text=Wedding+Dreams" alt="Wedding Illustration">
+      <img src="/hero-img.jpeg" alt="Wedding Illustration">
     </div>
   </section>
-
-  <!-- ===== About Section ===== -->
-  <section class="about">
-    <h2>Tentang Kami</h2>
-    <p>
-      Kami adalah wedding planner profesional yang siap membantu Anda dari tahap awal hingga hari pernikahan tiba.
-      Dengan tim berpengalaman, kami memastikan setiap detail sempurna, sehingga Anda dapat menikmati momen berharga tanpa stres.
-    </p>
-  </section>
-
-  <!-- ===== Footer ===== -->
-  <footer>
-    &copy; <%= new Date().getFullYear() %> Impian Kita Wedding Planner. All Rights Reserved.
-  </footer>
 
 </body>
 </html>
