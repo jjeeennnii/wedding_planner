@@ -19,35 +19,26 @@
         </div>
 
         <div class="right">
-            
             <h2>Login to <span>Impian Kita</span></h2>
-
-            <button class="google-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.5 12.0001C22.5 11.2321 22.433 10.4641 22.285 9.70613H12V14.2861H17.897C17.653 15.5481 16.89 16.6341 15.82 17.3781V20.4851H19.967C22.364 18.2421 23.75 15.1181 23.75 12.0001C23.75 11.2321 23.683 10.4641 23.535 9.70613H12V14.2861H18.773C18.618 15.0111 18.257 15.6881 17.72 16.2361L20.828 19.3441L20.893 19.4101C21.619 18.6651 22.203 17.8091 22.585 16.8841L22.651 16.9501L22.5 12.0001Z" fill="#4285F4"/>
-                    <path d="M12 23.7501C15.228 23.7501 17.95 22.7151 19.967 20.4851L15.82 17.3781C14.735 18.1561 13.435 18.5901 12 18.5901C9.07 18.5901 6.588 16.6271 5.67 13.9181H1.523C3.39 17.5871 7.303 20.2501 12 20.2501C13.435 20.2501 14.735 19.8161 15.82 19.0381L19.967 22.1451C18.882 23.0131 17.582 23.6191 16.147 23.7501H12Z" fill="#34A853"/>
-                    <path d="M5.67 13.9181C5.438 13.2981 5.313 12.6511 5.313 12.0001C5.313 11.3491 5.438 10.7021 5.67 10.0821V6.9751H1.523C0.84 8.3561 0.499 10.1191 0.499 12.0001C0.499 13.8811 0.84 15.6441 1.523 17.0251L5.67 13.9181Z" fill="#FBBC05"/>
-                    <path d="M12 5.4101C13.682 5.4101 15.117 6.0021 16.147 6.9751L19.967 3.8681C17.95 1.6381 15.228 0.6031 12 0.6031C7.303 0.6031 3.39 3.2661 1.523 6.9751L5.67 10.0821C6.588 7.3731 9.07 5.4101 12 5.4101Z" fill="#EA4335"/>
-                </svg>
-                Login with google
-            </button>
+            <% if (message) { %>
+            <div class="message success"><%= message %></div>
+            <% } %>
+            <% if (error) { %>
+            <div class="message error"><%= error %></div>
+            <% } %>
 
             <p class="or">or sign in with email</p>
 
             <form action="/login" method="POST"> 
                 <input type="email" name="email" placeholder="Email address" required>
-
                 <input type="password" name="password" placeholder="Password" required>
-                
-                <a href="#" class="forgot">Forget your password ?</a>
-
+                <a href="#" class="forgot">Forget your password?</a>
                 <button type="submit" class="signin">SIGN IN</button>
             </form>
 
             <p class="signup">
                 Not a member yet? <a href="/signup">Sign Up</a>
             </p>
-
         </div>
     </div>
 
